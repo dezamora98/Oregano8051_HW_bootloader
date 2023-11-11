@@ -55,14 +55,14 @@ begin
     tmod_i <= "00010000";    -- tmr1 mode 2
     reload_i <= x"ff";       -- tmr1 autoreload for 625000bps in 12MHz fcpu;
 
-    process (clk, reset)
+    init_tmr: process (clk, reset)
     begin
         if reset = '1' then
             
-        elsif rising_edge(clk) then
+        elsif clk'event and clk = '1' then
             
         end if;
-    end process;
+    end process init_tmr;
 
 
 end architecture;
