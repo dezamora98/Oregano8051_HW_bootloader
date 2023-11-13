@@ -5,5 +5,5 @@ ____
 
 ## Máquina de estados preeliminar
 
-[](./doc/FSM.png)
+[](doc/FSM.png)
 ____
