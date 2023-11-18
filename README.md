@@ -6,7 +6,7 @@ ____
 ```mermaid
 stateDiagram
 
-    st_idle -->|en_boot == 1| st_wait_command 
+    st_idle -->|"en_boot == 1"| st_wait_command: 
 
 ```
 
