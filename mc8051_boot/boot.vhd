@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL
 USE ieee.std_logic_arith.ALL;
 
-ENTITY bootloader_ram IS
+ENTITY boot IS
     PORT (
         clock            : IN  STD_LOGIC;
         reset            : IN  STD_LOGIC;
@@ -19,9 +19,9 @@ ENTITY bootloader_ram IS
         mem_ena      : OUT STD_LOGIC;                     -- enable signal for read program memory
         mem_wea      : OUT STD_LOGIC;                     -- enable signal for write program memory
     );
-END bootloader_ram;
+END boot;
 
-ARCHITECTURE arch OF bootloader_ram IS
+ARCHITECTURE arch OF boot IS
 
     COMPONENT EdgeDetector IS
         PORT (
@@ -116,11 +116,8 @@ BEGIN
         END IF;
     END PROCESS; -- sync
 
-    next_state_decode : PROCESS (state, en_boot, port_data_in,
-        port_en_data_in, data_o,
-        port_en_data_out, mem_data_in,
-        mem_data_out, mem_addr, mem_ena,
-        mem_wea, read_0_or_write_1)
+    next_state_decode : PROCESS (state, en_boot, port_data_in, data_in_ok, data_out_ok
+                                 size, addr, code, command, checksum)
     BEGIN
 
         next_state   <= state;
@@ -187,55 +184,62 @@ BEGIN
             END IF;
 
             WHEN st_write =>
-                IF code = x"00" THEN
-                    next_state <= st_wait_data;
-                    --ELSIF code = other_coder THEN
-                ELSE
-                    next_state <= st_idle;
-                END IF;
+            IF code = x"00" THEN
+                next_state <= st_wait_data;
+                --ELSIF code = other_coder THEN
+            ELSE
+                next_state <= st_idle;
+            END IF;
 
             WHEN st_wait_data =>
-                IF size = x"00" THEN
-                    new_checksum <= (NOT checksum) + 1; --The two's complement
-                    next_state   <= st_send_checksum;
-                ELSIF data_in_ok = '1' THEN
-                    new_checksum <= checksum + port_data_in;
-                    next_state   <= st_write_data;
-                END IF;
+            IF size = x"00" THEN
+                new_checksum <= (NOT checksum) + 1; --The two's complement
+                next_state   <= st_send_checksum;
+            ELSIF data_in_ok = '1' THEN
+                new_checksum <= checksum + port_data_in;
+                next_state   <= st_write_data;
+            END IF;
 
             WHEN st_write_data =>
-                new_addr   <= addr + 1;
-                new_size   <= size - 1;
-                next_state <= st_wait_data;
+            new_addr   <= addr + 1;
+            new_size   <= size - 1;
+            next_state <= st_wait_data;
 
             WHEN st_wait_send_checksum =>
-                IF data_out_ok = '1' THEN
-                    next_state <= st_send_checksum;
-                END IF;
+            IF data_out_ok = '1' THEN
+                next_state <= st_idle;
+            END IF;
 
             WHEN st_send_checksum =>
-                next_state <= st_wait_send_checksum;
+            next_state <= st_wait_send_checksum;
 
             WHEN st_read =>
-                IF code = x"00" THEN
-                    next_state <= st_send_data;
-                    --ELSIF code = other_coder THEN
-                ELSE
-                    next_state <= st_idle;
-                END IF;
-                
-            WHEN st_send_data =>
-                IF size = x"00" THEN
-                    new_checksum <= (NOT checksum) + 1; --The two's complement
-                    next_state   <= st_send_checksum;
-                ELSIF data_out_ok = '1' THEN
-                    new_checksum <= checksum + port_data_in;
-                    next_state   <= st_write_data;
-                END IF;
-            WHEN OTHERS =>
-            next_state <= st_idle;
-        END CASE;
+            IF code = x"00" THEN
+                next_state <= st_send_data;
+                --ELSIF code = other_coder THEN
+            ELSE
+                next_state <= st_idle;
+            END IF;
 
-    END PROCESS; -- next_state_decode
+            WHEN st_send_data =>
+            new_state <= st_wait_send_data
+                         
+                         WHEN st_wait_send_data =>
+                         IF data_out_ok = '1' THEN
+                             IF size = x"00" THEN
+                                 new_checksum <= (NOT checksum) + 1; --The two's complement
+            next_state <= st_send_checksum;
+        ELSE
+            new_checksum <= checksum + port_data_in;
+            new_addr     <= addr + 1;
+            new_size     <= size - 1;
+            next_state   <= st_send_data;
+        END IF;
+    END IF;
+    WHEN OTHERS =>
+    next_state <= st_idle;
+END CASE;
+
+END PROCESS; -- next_state_decode
 
 END ARCHITECTURE; -- arch
