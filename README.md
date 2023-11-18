@@ -4,9 +4,9 @@ implementation of a hardware bootloader for the Oregano8051 kernel taking advant
 ____
 
 ```mermaid
-stateDiagram
+stateDiagram-v2
 
-    st_idle -->|"en_boot == 1"| st_wait_command: 
+    st_idle --> st_wait_command: en_boot = 1
 
 ```
 
