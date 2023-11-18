@@ -117,7 +117,7 @@ BEGIN
     END PROCESS; -- sync
 
     next_state_decode : PROCESS (state, en_boot, port_data_in, data_in_ok, data_out_ok
-                                 size, addr, code, command, checksum)
+        size, addr, code, command, checksum)
     BEGIN
 
         next_state   <= state;
@@ -222,24 +222,24 @@ BEGIN
             END IF;
 
             WHEN st_send_data =>
-            new_state <= st_wait_send_data
-                         
-                         WHEN st_wait_send_data =>
-                         IF data_out_ok = '1' THEN
-                             IF size = x"00" THEN
-                                 new_checksum <= (NOT checksum) + 1; --The two's complement
-            next_state <= st_send_checksum;
-        ELSE
-            new_checksum <= checksum + port_data_in;
-            new_addr     <= addr + 1;
-            new_size     <= size - 1;
-            next_state   <= st_send_data;
-        END IF;
-    END IF;
-    WHEN OTHERS =>
-    next_state <= st_idle;
-END CASE;
+            new_state <= st_wait_send_data;
 
-END PROCESS; -- next_state_decode
+            WHEN st_wait_send_data =>
+            IF data_out_ok = '1' THEN
+                IF size = x"00" THEN
+                    new_checksum <= (NOT checksum) + 1; --The two's complement
+                    next_state   <= st_send_checksum;
+                ELSE
+                    new_checksum <= checksum + port_data_in;
+                    new_addr     <= addr + 1;
+                    new_size     <= size - 1;
+                    next_state   <= st_send_data;
+                END IF;
+            END IF;
+            WHEN OTHERS =>
+            next_state <= st_idle;
+        END CASE;
+
+    END PROCESS; -- next_state_decode
 
 END ARCHITECTURE; -- arch
