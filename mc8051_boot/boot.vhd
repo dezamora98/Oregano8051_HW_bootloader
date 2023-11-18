@@ -1,6 +1,6 @@
 LIBRARY ieee;
-USE ieee.std_logic_1164.ALL
-USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_1164.ALL;
+use ieee.std_logic_unsigned.all;
 
 ENTITY boot IS
     PORT (
@@ -9,15 +9,15 @@ ENTITY boot IS
         en_boot          : IN  STD_LOGIC;                    -- enable boot module
         port_data_in     : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data input
         port_data_out    : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data output
-        port_en_data_in  : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- enable signal for parallel data input
-        port_en_data_out : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- enable signal for parallel data output
+        port_en_data_in  : IN  STD_LOGIC; 					 -- enable signal for parallel data input
+        port_en_data_out : IN  STD_LOGIC; 					 -- enable signal for parallel data output
         port_wr_data_out : OUT STD_LOGIC;                    -- write signal for parallel data output
 
         mem_data_in  : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);  -- parallel data input for program memory
         mem_data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);  -- parallel data output for program memory
         mem_addr     : OUT STD_LOGIC_VECTOR(15 DOWNTO 0); -- parallel addres for program memory
         mem_ena      : OUT STD_LOGIC;                     -- enable signal for read program memory
-        mem_wea      : OUT STD_LOGIC;                     -- enable signal for write program memory
+        mem_wea      : OUT STD_LOGIC                      -- enable signal for write program memory
     );
 END boot;
 
@@ -35,20 +35,20 @@ ARCHITECTURE arch OF boot IS
 
     TYPE state_type IS (st_idle, st_wait_command, st_write, st_read, st_wait_size,
         st_wait_addr_h, st_wait_addr_l, st_wait_code, st_wait_data, st_write_data,
-        st_read, st_send_data, st_wait_send_data, st_send_checksum, st_wait_send_checksum);
+        st_send_data, st_wait_send_data, st_send_checksum, st_wait_send_checksum);
 
     SIGNAL state, next_state : state_type := st_idle;
 
-    SIGNAL read_0_or_write_1 : STD_LOGIC := 0;
+    SIGNAL read_0_or_write_1 : STD_LOGIC := '0'; 
 
     SIGNAL size     : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
     SIGNAL new_size : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
 
     SIGNAL code     : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
-    SIGNAL new_dode : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
+    SIGNAL new_code : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
 
-    SIGNAL addr     : STD_LOGIC_VECTOR(16 DOWNTO 0) := x"0000";
-    SIGNAL new_addr : STD_LOGIC_VECTOR(16 DOWNTO 0) := x"0000";
+    SIGNAL addr     : STD_LOGIC_VECTOR(15 DOWNTO 0) := x"0000";
+    SIGNAL new_addr : STD_LOGIC_VECTOR(15 DOWNTO 0) := x"0000";
 
     SIGNAL checksum     : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
     SIGNAL new_checksum : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
@@ -74,30 +74,32 @@ BEGIN
 
     mem_data_out <= port_data_in;
 
-    mem_ena <= '1' WHEN state = st_send_data OR st_write_data ELSE
+    mem_ena <= '1' WHEN state = st_send_data OR state = st_write_data ELSE
                '0';
     mem_wea <= '1' WHEN state = st_write_data ELSE
                '0';
 
     i_parallel_in_ok : EdgeDetector
     PORT MAP(
-        Clock         <= clock,
-        Reset         <= reset,
-        SignalDetect  <= port_en_data_in,
-        RisingEdgeDet <= data_in_ok
+        Clock         => clock,
+        Reset         => reset,
+        SignalDetect  => port_en_data_in,
+        RisingEdgeDet => data_in_ok,
+		FallingEdgeDet => open
     );
 
     i_parallel_out_ok : EdgeDetector
     PORT MAP(
-        Clock         <= clock,
-        Reset         <= reset,
-        SignalDetect  <= port_en_data_out,
-        RisingEdgeDet <= data_out_ok
+        Clock         => clock,
+        Reset         => reset,
+        SignalDetect  => port_en_data_out,
+        RisingEdgeDet => data_out_ok,
+		FallingEdgeDet => open
     );
 
     sync : PROCESS (clock, reset)
     BEGIN
-        IF reset THEN
+        IF reset = '1' THEN
             state    <= st_idle;
             addr     <= x"0000";
             size     <= x"00";
@@ -114,8 +116,8 @@ BEGIN
         END IF;
     END PROCESS; -- sync
 
-    next_state_decode : PROCESS (state, en_boot, port_data_in, data_in_ok, data_out_ok
-        size, addr, code, command, checksum)
+    next_state_decode : PROCESS (state, en_boot, port_data_in, data_in_ok, data_out_ok,
+								size, addr, code, command, checksum)
     BEGIN
 
         next_state   <= state;
@@ -154,7 +156,7 @@ BEGIN
 
             WHEN st_wait_addr_h =>
             IF data_in_ok = '1' THEN
-                new_addr(15 DOWNTO 0) <= port_data_in;
+                new_addr(15 DOWNTO 8) <= port_data_in;
                 next_state            <= st_wait_addr_l;
                 new_checksum          <= checksum + port_data_in;
             END IF;
@@ -220,7 +222,7 @@ BEGIN
             END IF;
 
             WHEN st_send_data =>
-            new_state <= st_wait_send_data;
+            next_state <= st_wait_send_data;
 
             WHEN st_wait_send_data =>
             IF data_out_ok = '1' THEN
