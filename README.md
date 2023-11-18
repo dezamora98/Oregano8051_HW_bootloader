@@ -54,7 +54,7 @@ stateDiagram-v2
             checksum_reg += port_data_in
     end note
 
-    note right of wait_code
+    note left of wait_code
         when  data_in_ok = 1:
             code_reg = port_data_in
             checksum_reg += port_data_in

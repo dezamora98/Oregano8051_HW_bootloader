@@ -33,11 +33,9 @@ ARCHITECTURE arch OF boot IS
         );
     END COMPONENT;
 
-    TYPE state_type IS (st_idle, st_wait_command, st_write,
-        st_read, st_wait_size, st_wait_addr_h,
-        st_wait_addr_l, st_wait_code, st_wait_data,
-        st_write_data, st_inc_addr, st_read,
-        st_send_data, st_wait_send_data, st_send_checksum, st_wait_send_checksum);
+    TYPE state_type IS (st_idle, st_wait_command, st_write, st_read, st_wait_size,
+        st_wait_addr_h, st_wait_addr_l, st_wait_code, st_wait_data, st_write_data,
+        st_read, st_send_data, st_wait_send_data, st_send_checksum, st_wait_send_checksum);
 
     SIGNAL state, next_state : state_type := st_idle;
 
