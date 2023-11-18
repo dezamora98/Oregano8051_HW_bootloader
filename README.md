@@ -6,6 +6,7 @@ ____
 ```mermaid
 stateDiagram-v2
 
+    [*] --> st_idle: reset = 0
     st_idle --> st_wait_command: en_boot = 1
 
 ```
