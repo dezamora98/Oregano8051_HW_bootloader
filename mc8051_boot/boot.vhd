@@ -1,6 +1,6 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-use ieee.std_logic_unsigned.all;
+USE ieee.std_logic_unsigned.ALL;
 
 ENTITY boot IS
     PORT (
@@ -9,8 +9,8 @@ ENTITY boot IS
         en_boot          : IN  STD_LOGIC;                    -- enable boot module
         port_data_in     : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data input
         port_data_out    : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data output
-        port_en_data_in  : IN  STD_LOGIC; 					 -- enable signal for parallel data input
-        port_en_data_out : IN  STD_LOGIC; 					 -- enable signal for parallel data output
+        port_en_data_in  : IN  STD_LOGIC;                    -- enable signal for parallel data input
+        port_en_data_out : IN  STD_LOGIC;                    -- enable signal for parallel data output
         port_wr_data_out : OUT STD_LOGIC;                    -- write signal for parallel data output
 
         mem_data_in  : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);  -- parallel data input for program memory
@@ -39,7 +39,7 @@ ARCHITECTURE arch OF boot IS
 
     SIGNAL state, next_state : state_type := st_idle;
 
-    SIGNAL read_0_or_write_1 : STD_LOGIC := '0'; 
+    SIGNAL read_0_or_write_1 : STD_LOGIC := '0';
 
     SIGNAL size     : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
     SIGNAL new_size : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
@@ -84,8 +84,7 @@ BEGIN
         Clock         => clock,
         Reset         => reset,
         SignalDetect  => port_en_data_in,
-        RisingEdgeDet => data_in_ok,
-		FallingEdgeDet => open
+        RisingEdgeDet => data_in_ok
     );
 
     i_parallel_out_ok : EdgeDetector
@@ -93,8 +92,7 @@ BEGIN
         Clock         => clock,
         Reset         => reset,
         SignalDetect  => port_en_data_out,
-        RisingEdgeDet => data_out_ok,
-		FallingEdgeDet => open
+        RisingEdgeDet => data_out_ok
     );
 
     sync : PROCESS (clock, reset)
@@ -117,7 +115,7 @@ BEGIN
     END PROCESS; -- sync
 
     next_state_decode : PROCESS (state, en_boot, port_data_in, data_in_ok, data_out_ok,
-								size, addr, code, command, checksum)
+        size, addr, code, command, checksum)
     BEGIN
 
         next_state   <= state;
