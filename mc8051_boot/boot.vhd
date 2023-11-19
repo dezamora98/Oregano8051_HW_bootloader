@@ -1,6 +1,7 @@
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-USE ieee.std_logic_unsigned.ALL;
+use ieee.std_logic_unsigned.all; 
 
 ENTITY boot IS
     PORT (
@@ -38,8 +39,6 @@ ARCHITECTURE arch OF boot IS
         st_send_data, st_wait_send_data, st_send_checksum, st_wait_send_checksum);
 
     SIGNAL state, next_state : state_type := st_idle;
-
-    SIGNAL read_0_or_write_1 : STD_LOGIC := '0';
 
     SIGNAL size     : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
     SIGNAL new_size : STD_LOGIC_VECTOR(7 DOWNTO 0) := x"00";
