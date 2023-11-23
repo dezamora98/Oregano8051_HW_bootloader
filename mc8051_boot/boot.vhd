@@ -1,7 +1,7 @@
 
 LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-use ieee.std_logic_unsigned.all; 
+USE ieee.std_logic_1164.all;
+use ieee.numeric_std.all; 
 
 ENTITY boot IS
     PORT (
@@ -141,34 +141,34 @@ BEGIN
             IF data_in_ok = '1' THEN
                 new_command  <= port_data_in;
                 next_state   <= st_wait_size;
-                new_checksum <= checksum + port_data_in;
+                new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
             END IF;
 
             WHEN st_wait_size =>
             IF data_in_ok = '1' THEN
                 new_size     <= port_data_in;
                 next_state   <= st_wait_addr_h;
-                new_checksum <= checksum + port_data_in;
+                new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
             END IF;
 
             WHEN st_wait_addr_h =>
             IF data_in_ok = '1' THEN
                 new_addr(15 DOWNTO 8) <= port_data_in;
                 next_state            <= st_wait_addr_l;
-                new_checksum          <= checksum + port_data_in;
+                new_checksum          <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
             END IF;
 
             WHEN st_wait_addr_l =>
             IF data_in_ok = '1' THEN
                 new_addr(7 DOWNTO 0) <= port_data_in;
                 next_state           <= st_wait_code;
-                new_checksum         <= checksum + port_data_in;
+                new_checksum         <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
             END IF;
 
             WHEN st_wait_code =>
             IF data_in_ok = '1' THEN
                 new_code     <= port_data_in;
-                new_checksum <= checksum + port_data_in;
+                new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
 
                 IF command = CMD_READ THEN
                     next_state <= st_read;
@@ -190,16 +190,16 @@ BEGIN
 
             WHEN st_wait_data =>
             IF size = x"00" THEN
-                new_checksum <= (NOT checksum) + 1; --The two's complement
+                new_checksum <= std_logic_vector(unsigned((NOT checksum)) + 1); --The two's complement
                 next_state   <= st_send_checksum;
             ELSIF data_in_ok = '1' THEN
-                new_checksum <= checksum + port_data_in;
+                new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
                 next_state   <= st_write_data;
             END IF;
 
             WHEN st_write_data =>
-            new_addr   <= addr + 1;
-            new_size   <= size - 1;
+            new_addr   <= std_logic_vector(unsigned(addr) + 1);
+            new_size   <= std_logic_vector(unsigned(size) - 1);
             next_state <= st_wait_data;
 
             WHEN st_wait_send_checksum =>
@@ -224,12 +224,12 @@ BEGIN
             WHEN st_wait_send_data =>
             IF data_out_ok = '1' THEN
                 IF size = x"00" THEN
-                    new_checksum <= (NOT checksum) + 1; --The two's complement
+                    new_checksum <= std_logic_vector(unsigned((NOT checksum)) + 1); --The two's complement
                     next_state   <= st_send_checksum;
                 ELSE
-                    new_checksum <= checksum + port_data_in;
-                    new_addr     <= addr + 1;
-                    new_size     <= size - 1;
+                    new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
+                    new_addr     <= std_logic_vector(unsigned(addr) + 1);
+                    new_size     <= std_logic_vector(unsigned(size) - 1);
                     next_state   <= st_send_data;
                 END IF;
             END IF;

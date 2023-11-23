@@ -1,15 +1,10 @@
 --------------------------------------------------------------------------------
--- Company: 
--- Engineer:
+-- Engineer: Daniel Enrique Zamora Sifredo
 --
 -- Create Date:   20:11:25 11/18/2023
 -- Design Name:   
--- Module Name:   /home/ise/D_DRIVE/Documents/Trabajo/CUJAE/TAdE/XC3S1600E_8051LAB/boot_tb.vhd
 -- Project Name:  XC3S1600E_8051LAB
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
+--
 -- VHDL Test Bench Created by ISE for module: boot
 -- 
 -- Dependencies:
@@ -72,11 +67,16 @@ ARCHITECTURE behavior OF boot_tb IS
    signal port_wr_data_out : std_logic;
    signal mem_data_out : std_logic_vector(7 downto 0);
    signal mem_addr : std_logic_vector(15 downto 0);
-   signal mem_ena : std_logic;
-   signal mem_wea : std_logic;
+   signal mem_ena : std_logic = '0';
+   signal mem_wea : std_logic = '0';
 
    -- Clock period definitions
-   constant clock_period : time := 10 ns;
+   constant clock_period : time := 80 ns;
+
+   type data_array is array( 0 to 8 ) of std_logic_vector(7 downto 0);
+   variable sim_data_in : data_array := (
+      c"w",x"03",x"00"
+   );
  
 BEGIN
  
@@ -111,12 +111,15 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
-      wait for clock_period*10;
-
+      wait for clock_period*2;
+      reset <= '1';
+      wait for clock_period*2;
       -- insert stimulus here 
+      en_boot <= '1';
 
+
+
+      assert false report “Test complete”;
       wait;
    end process;
 
