@@ -74,10 +74,7 @@ ARCHITECTURE behavior OF boot_tb IS
    constant clock_period : time := 80 ns;
 
    type data_array is array( 0 to 8 ) of std_logic_vector(7 downto 0);
-   variable sim_data_in : data_array := (
-      c"w",x"03",x"00"
-   );
- 
+
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
