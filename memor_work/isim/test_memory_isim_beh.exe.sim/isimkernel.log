@@ -2,12 +2,12 @@ Command line:
    test_memory_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  1193
+     -socket  1212
 
-Wed Nov 29 05:24:46 2023
+Wed Nov 29 06:47:00 2023
 
 
- Elaboration Time: 5.71822 sec
+ Elaboration Time: 5.78832 sec
 
  Current Memory Usage: 504.664 Meg
 
@@ -20,9 +20,9 @@ Wed Nov 29 05:24:46 2023
  Total Traceable Variables  : 217
  Total Scalar Nets and Variables : 526259
 
- Total Simulation Time: 9.30338 sec
+ Total Simulation Time: 6.27903 sec
 
  Current Memory Usage: 504.664 Meg
 
-Wed Nov 29 05:37:38 2023
+Wed Nov 29 06:51:48 2023
 

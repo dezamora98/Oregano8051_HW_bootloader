@@ -1,3 +1,0 @@
-vhdl isim_temp "EdgeDetector.vhd"
-vhdl isim_temp "boot.vhd"
-vhdl isim_temp "test_boot.vhd"

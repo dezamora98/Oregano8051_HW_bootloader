@@ -1,5 +1,0 @@
-set -tmpdir "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/xst/projnav.tmp"
-set -xsthdpdir "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/xst"
-elaborate
--ifn memory_work.prj
--ifmt mixed

@@ -47,7 +47,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1701231869" xil_pn:in_ck="-4801898582188012324" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1701231868">
+    <transform xil_pn:end_ts="1701236800" xil_pn:in_ck="-4801898582188012324" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1701236800">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="EdgeDetector.vhd"/>
@@ -69,16 +69,15 @@
       <outfile xil_pn:name="ipcore_dir/ram.ngc"/>
       <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701231874" xil_pn:in_ck="-8173490426226722757" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1701231874">
+    <transform xil_pn:end_ts="1701236808" xil_pn:in_ck="-4801898582188012324" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1701236808">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="EdgeDetector.vhd"/>
       <outfile xil_pn:name="boot.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
       <outfile xil_pn:name="mem_work.vhd"/>
       <outfile xil_pn:name="test_memory.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701231878" xil_pn:in_ck="-8173490426226722757" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4294573782375606686" xil_pn:start_ts="1701231874">
+    <transform xil_pn:end_ts="1701236813" xil_pn:in_ck="-8173490426226722757" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4294573782375606686" xil_pn:start_ts="1701236808">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -90,7 +89,7 @@
       <outfile xil_pn:name="test_memory_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1701231879" xil_pn:in_ck="-7304428738462442585" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7835154198061913195" xil_pn:start_ts="1701231878">
+    <transform xil_pn:end_ts="1701236813" xil_pn:in_ck="-7304428738462442585" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7835154198061913195" xil_pn:start_ts="1701236813">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

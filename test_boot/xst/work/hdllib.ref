@@ -1,6 +1,0 @@
-AR memory_work behavioral "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/memory_work.vhd" sub00/vhpl05 1701157041
-EN boot NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/boot.vhd" sub00/vhpl02 1701155074
-EN edgedetector NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/EdgeDetector.vhd" sub00/vhpl00 1701155072
-AR edgedetector arch "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/EdgeDetector.vhd" sub00/vhpl01 1701155073
-AR boot arch "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/boot.vhd" sub00/vhpl03 1701155075
-EN memory_work NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/memory_work.vhd" sub00/vhpl04 1701157040

@@ -142,7 +142,7 @@ BEGIN
             IF data_in_ok = '1' THEN
                 new_command  <= port_data_in;
                 next_state   <= st_wait_size;
-                new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
+                
             END IF;
 
             WHEN st_wait_size =>

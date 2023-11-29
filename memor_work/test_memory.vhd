@@ -107,7 +107,7 @@ BEGIN
 		
 		--send size
 		wait for 44 ns;
-		port_data_in <= x"04";
+		port_data_in <= x"02";
 		
 		wait for 30 ns;
 		port_en_data_in <= '1';
@@ -125,7 +125,7 @@ BEGIN
 		
 		--send addr_l
 		wait for 35 ns;
-		port_data_in <= x"FF";
+		port_data_in <= x"00";
 		
 		wait for 30 ns;
 		port_en_data_in <= '1';
@@ -143,14 +143,6 @@ BEGIN
 		
 		--send data
 		wait for 35 ns;
-		port_data_in <= x"04";
-		
-		wait for 30 ns;
-		port_en_data_in <= '1';
-		wait for 30 ns;
-		port_en_data_in <= '0';
-		
-		wait for 35 ns;
 		port_data_in <= x"05";
 		
 		wait for 30 ns;
@@ -159,22 +151,13 @@ BEGIN
 		port_en_data_in <= '0';
 		
 		wait for 35 ns;
-		port_data_in <= x"06";
+		port_data_in <= x"28";
 		
 		wait for 30 ns;
 		port_en_data_in <= '1';
 		wait for 30 ns;
 		port_en_data_in <= '0';
 		
-		wait for 35 ns;
-		port_data_in <= x"07";
-		
-		wait for 30 ns;
-		port_en_data_in <= '1';
-		wait for 30 ns;
-		port_en_data_in <= '0';
-
-      wait for clock_period*10;
 
       -- insert stimulus here 
 
