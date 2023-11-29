@@ -128,14 +128,15 @@ BEGIN
         CASE(state) IS
 
             WHEN st_idle =>
+				new_addr     <= x"0000";
+            new_size     <= x"00";
+            new_code     <= x"00";
+            new_command  <= x"00";
+            new_checksum <= x"00";
             IF en_boot = '1' THEN
                 next_state <= st_wait_command;
             ELSE
-                new_addr     <= x"0000";
-                new_size     <= x"00";
-                new_code     <= x"00";
-                new_command  <= x"00";
-                new_checksum <= x"00";
+					 next_state <= st_idle;	 
             END IF;
 
             WHEN st_wait_command =>
@@ -209,7 +210,7 @@ BEGIN
             next_state <= st_idle;
 
             WHEN st_read =>
-            IF code = x"01" THEN
+            IF code = x"00" THEN
                 next_state <= st_send_data;
                 --ELSIF code = other_coder THEN
             ELSE
@@ -221,11 +222,11 @@ BEGIN
 
             WHEN st_wait_send_data =>
             IF data_out_ok = '1' THEN
-                IF size = x"00" THEN
+                IF size = x"01" THEN
                     new_checksum <= std_logic_vector(unsigned((NOT checksum)) + 1); --The two's complement
                     next_state   <= st_send_checksum;
                 ELSE
-                    new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(port_data_in));
+                    new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(mem_data_in));
                     new_addr     <= std_logic_vector(unsigned(addr) + 1);
                     new_size     <= std_logic_vector(unsigned(size) - 1);
                     next_state   <= st_send_data;

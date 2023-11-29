@@ -1,29 +1,29 @@
 V3 15
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" 2023/11/29.06:46:16 M.81d
-EN work/boot 1701236796 \
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" 2023/11/29.08:48:16 M.81d
+EN work/boot 1701244934 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" \
       PB ieee/std_logic_1164 1290154108 PB ieee/NUMERIC_STD 1290154109
-AR work/boot/arch 1701236797 \
+AR work/boot/arch 1701244935 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" \
-      EN work/boot 1701236796 CP EdgeDetector
+      EN work/boot 1701244934 CP EdgeDetector
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" 2023/11/26.18:31:01 M.81d
-EN work/EdgeDetector 1701236794 \
+EN work/EdgeDetector 1701244932 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" \
       PB ieee/std_logic_1164 1290154108
-AR work/EdgeDetector/Arch 1701236795 \
+AR work/EdgeDetector/Arch 1701244933 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" \
-      EN work/EdgeDetector 1701236794
+      EN work/EdgeDetector 1701244932
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" 2023/11/29.01:33:26 M.81d
-EN work/ram 1701236798 \
+EN work/ram 1701244936 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" \
       PB ieee/std_logic_1164 1290154108
-AR work/ram/ram_a 1701236799 \
+AR work/ram/ram_a 1701244937 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" \
-      EN work/ram 1701236798
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" 2023/11/29.05:05:02 M.81d
-EN work/mem_work 1701236800 \
+      EN work/ram 1701244936
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" 2023/11/29.09:02:10 M.81d
+EN work/mem_work 1701244938 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" \
       PB ieee/std_logic_1164 1290154108 PB ieee/NUMERIC_STD 1290154109
-AR work/mem_work/Behavioral 1701236801 \
+AR work/mem_work/Behavioral 1701244939 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" \
-      EN work/mem_work 1701236800 CP boot CP ram
+      EN work/mem_work 1701244938 CP boot CP ram

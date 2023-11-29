@@ -1,8 +1,8 @@
-AR ram ram_a "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" sub00/vhpl05 1701236799
-EN boot NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" sub00/vhpl02 1701236796
-AR mem_work behavioral "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" sub00/vhpl07 1701236801
-EN edgedetector NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" sub00/vhpl00 1701236794
-AR edgedetector arch "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" sub00/vhpl01 1701236795
-EN mem_work NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" sub00/vhpl06 1701236800
-AR boot arch "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" sub00/vhpl03 1701236797
-EN ram NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" sub00/vhpl04 1701236798
+AR ram ram_a "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" sub00/vhpl05 1701244937
+EN boot NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" sub00/vhpl02 1701244934
+AR mem_work behavioral "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" sub00/vhpl07 1701244939
+EN edgedetector NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" sub00/vhpl00 1701244932
+AR edgedetector arch "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" sub00/vhpl01 1701244933
+EN mem_work NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" sub00/vhpl06 1701244938
+AR boot arch "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" sub00/vhpl03 1701244935
+EN ram NULL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" sub00/vhpl04 1701244936

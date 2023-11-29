@@ -107,7 +107,7 @@ BEGIN
 		
 		--send size
 		wait for 44 ns;
-		port_data_in <= x"02";
+		port_data_in <= x"08";
 		
 		wait for 30 ns;
 		port_en_data_in <= '1';
@@ -125,7 +125,7 @@ BEGIN
 		
 		--send addr_l
 		wait for 35 ns;
-		port_data_in <= x"00";
+		port_data_in <= x"08";
 		
 		wait for 30 ns;
 		port_en_data_in <= '1';
@@ -143,7 +143,7 @@ BEGIN
 		
 		--send data
 		wait for 35 ns;
-		port_data_in <= x"05";
+		port_data_in <= x"40";
 		
 		wait for 30 ns;
 		port_en_data_in <= '1';
@@ -158,7 +158,147 @@ BEGIN
 		wait for 30 ns;
 		port_en_data_in <= '0';
 		
-
+		wait for 35 ns;
+		port_data_in <= x"03";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		wait for 35 ns;
+		port_data_in <= x"01";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		wait for 35 ns;
+		port_data_in <= x"86";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		wait for 35 ns;
+		port_data_in <= x"00";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		wait for 35 ns;
+		port_data_in <= x"88";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		wait for 35 ns;
+		port_data_in <= x"00";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		--lectura
+		wait for 100 ns;
+		--send command
+		wait for 68 ns;
+		port_data_in <= x"00";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		--send size
+		wait for 44 ns;
+		port_data_in <= x"08";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+      --send addr_h
+		wait for 35 ns;
+		port_data_in <= x"00";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		--send addr_l
+		wait for 35 ns;
+		port_data_in <= x"08";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		--send code
+		wait for 35 ns;
+		port_data_in <= x"00";
+		
+		wait for 30 ns;
+		port_en_data_in <= '1';
+		wait for 30 ns;
+		port_en_data_in <= '0';
+		
+		--recive data
+		wait for 30 ns;
+		wait for 30 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 30 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		
+		wait for 60 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 80 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 30 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 80 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 70 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 110 ns;
+		port_en_data_out <= '1';
+		wait for 30 ns;
+		port_en_data_out <= '0';
+		
+		wait for 100 ns;
+		
+		
       -- insert stimulus here 
 
       wait;

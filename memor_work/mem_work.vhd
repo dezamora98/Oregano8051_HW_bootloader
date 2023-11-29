@@ -101,7 +101,7 @@ begin
         mem_data_out => entrada_memoria,
         mem_addr     => addr,
         mem_ena      => activar,                 
-        mem_wea      => escribir
+        mem_wea      => escritura(0)
     );
 	 
 	memory : ram 
