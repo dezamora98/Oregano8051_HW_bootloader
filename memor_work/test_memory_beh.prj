@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/ram.vhd"
+vhdl work "EdgeDetector.vhd"
+vhdl work "boot.vhd"
+vhdl work "mem_work.vhd"
+vhdl work "test_memory.vhd"

@@ -1,0 +1,3 @@
+vhdl work "EdgeDetector.vhd"
+vhdl work "boot.vhd"
+vhdl work "test_FSM_read.vhd"

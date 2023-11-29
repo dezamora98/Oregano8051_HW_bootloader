@@ -1,0 +1,24 @@
+V3 12
+FL "//VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/boot.vhd" 2023/11/26.07:13:48 M.81d
+FL "//VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/EdgeDetector.vhd" 2023/11/26.18:31:01 M.81d
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/boot.vhd" 2023/11/28.08:04:29 M.81d
+EN work/boot 1701155074 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/boot.vhd" \
+      PB ieee/std_logic_1164 1290154108 PB ieee/NUMERIC_STD 1290154109
+AR work/boot/arch 1701155075 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/boot.vhd" \
+      EN work/boot 1701155074 CP EdgeDetector
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/EdgeDetector.vhd" 2023/11/26.18:31:01 M.81d
+EN work/EdgeDetector 1701155072 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/EdgeDetector.vhd" \
+      PB ieee/std_logic_1164 1290154108
+AR work/EdgeDetector/Arch 1701155073 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/EdgeDetector.vhd" \
+      EN work/EdgeDetector 1701155072
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/memory_work.vhd" 2023/11/28.08:37:17 M.81d
+EN work/memory_work 1701157040 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/memory_work.vhd" \
+      PB ieee/std_logic_1164 1290154108
+AR work/memory_work/Behavioral 1701157041 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/memory_work.vhd" \
+      EN work/memory_work 1701157040

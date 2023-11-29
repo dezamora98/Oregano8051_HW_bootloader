@@ -1,0 +1,36 @@
+Running: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory_isim_beh.exe -prj C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory_beh.prj work.test_memory 
+ISim M.81d (signature 0xcb73ee62)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 75256 KB
+Fuse CPU Usage: 340 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_arith from library ieee
+Using precompiled package std_logic_unsigned from library ieee
+Using precompiled package std_logic_textio from library ieee
+Compiling architecture arch of entity edgedetector [edgedetector_default]
+Compiling architecture arch of entity boot [boot_default]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v4_3_output_stage [\BLK_MEM_GEN_V4_3_output_stage("...]
+Compiling architecture output_stage_behavioral of entity blk_mem_gen_v4_3_output_stage [\BLK_MEM_GEN_V4_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity blk_mem_gen_v4_3_softecc_output_reg_stage [\BLK_MEM_GEN_V4_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity blk_mem_gen_v4_3_mem_module [\BLK_MEM_GEN_V4_3_mem_module("bl...]
+Compiling architecture behavioral of entity blk_mem_gen_v4_3 [\BLK_MEM_GEN_V4_3("blk_mem_gen_v...]
+Compiling architecture ram_a of entity ram [ram_default]
+Compiling architecture behavioral of entity mem_work [mem_work_default]
+Compiling architecture behavior of entity test_memory
+Time Resolution for simulation is 1ps.
+Compiled 26 VHDL Units
+Built simulation executable C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory_isim_beh.exe
+Fuse Memory Usage: 81916 KB
+Fuse CPU Usage: 1211 ms

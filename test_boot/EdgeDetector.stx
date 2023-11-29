@@ -1,0 +1,35 @@
+Release 12.4 - xst M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to //VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Parameter xsthdpdir set to //VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/EdgeDetector.vhd" in Library work.
+Entity <EdgeDetector> compiled.
+Entity <EdgeDetector> (Architecture <Arch>) compiled.
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.79 secs
+ 
+--> 
+
+Total memory usage is 120820 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

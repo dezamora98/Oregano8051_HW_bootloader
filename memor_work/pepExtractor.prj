@@ -1,0 +1,4 @@
+work	"EdgeDetector.vhd"
+work	"boot.vhd"
+work	"ipcore_dir/ram.vhd"
+work	"mem_work.vhd"

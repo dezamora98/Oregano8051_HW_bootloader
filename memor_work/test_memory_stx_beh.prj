@@ -1,0 +1,5 @@
+vhdl isim_temp "ipcore_dir/ram.vhd"
+vhdl isim_temp "EdgeDetector.vhd"
+vhdl isim_temp "boot.vhd"
+vhdl isim_temp "mem_work.vhd"
+vhdl isim_temp "test_memory.vhd"

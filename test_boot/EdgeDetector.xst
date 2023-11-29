@@ -1,0 +1,5 @@
+set -tmpdir "//VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/xst/projnav.tmp"
+set -xsthdpdir "//VBOXSVR/Proyectos_TAdE/Oregano/Tesis Oregano/Oregano8051_HW_bootloader/mc8051_boot/test_boot/xst"
+elaborate
+-ifn EdgeDetector.prj
+-ifmt mixed

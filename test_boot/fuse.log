@@ -1,0 +1,23 @@
+Running: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/test_FSM_read_isim_beh.exe -prj C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/test_FSM_read_beh.prj work.test_FSM_read 
+ISim M.81d (signature 0xcb73ee62)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/EdgeDetector.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/boot.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/test_FSM_read.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 72184 KB
+Fuse CPU Usage: 260 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Compiling architecture arch of entity edgedetector [edgedetector_default]
+Compiling architecture arch of entity boot [boot_default]
+Compiling architecture behavior of entity test_fsm_read
+Time Resolution for simulation is 1ps.
+Compiled 8 VHDL Units
+Built simulation executable C:/Documents and Settings/lester/Escritorio/OOOOOOO/test_boot/test_FSM_read_isim_beh.exe
+Fuse Memory Usage: 77820 KB
+Fuse CPU Usage: 340 ms
