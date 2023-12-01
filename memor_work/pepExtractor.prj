@@ -1,4 +1,8 @@
 work	"EdgeDetector.vhd"
+work	"Puerto_serie.vhd"
 work	"boot.vhd"
+work	"bootloader.vhd"
 work	"ipcore_dir/ram.vhd"
+work	"mc8051_tmrctr_.vhd"
 work	"mem_work.vhd"
+work	"timer.vhd"

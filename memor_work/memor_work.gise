@@ -23,54 +23,92 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Timer.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Timer.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Timer.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="boot.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="boot.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="boot.xst"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="boot_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bootloader.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bootloader.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bootloader.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="clk_12mhz.vhd"/>
+    <file xil_pn:fileType="FILE_UCF" xil_pn:name="clk_12mhz_arwz.ucf" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/clk_12mhz_readme.txt"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mem_work.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mem_work.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="mem_work.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_memory_beh.prj"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_memory_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_memory_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reloj_12MHz.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="reloj_12MHz.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="reloj_12MHz.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_bootloader_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_bootloader_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_bootloader_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_bootloader_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testreloj12_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testreloj12_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testreloj12_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testreloj12_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="xaw2vhdl.log"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1701244958" xil_pn:in_ck="-4801898582188012324" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1701244958">
+    <transform xil_pn:end_ts="1701392493" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1701392493">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1701414352" xil_pn:in_ck="-7033532248490212947" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1701414352">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="EdgeDetector.vhd"/>
+      <outfile xil_pn:name="Puerto_serie.vhd"/>
       <outfile xil_pn:name="boot.vhd"/>
+      <outfile xil_pn:name="bootloader.vhd"/>
+      <outfile xil_pn:name="mc8051_siu_.vhd"/>
+      <outfile xil_pn:name="mc8051_tmrctr_.vhd"/>
       <outfile xil_pn:name="mem_work.vhd"/>
+      <outfile xil_pn:name="test_bootloader.vhd"/>
       <outfile xil_pn:name="test_memory.vhd"/>
+      <outfile xil_pn:name="timer.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701244128" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6858020085705210034" xil_pn:start_ts="1701244128">
+    <transform xil_pn:end_ts="1701410419" xil_pn:in_ck="2081653613640472184" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7673319311973285184" xil_pn:start_ts="1701410419">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="clk_12mhz.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1701410191" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6677827399272236222" xil_pn:start_ts="1701410191">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1701244128" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4439717189633827632" xil_pn:start_ts="1701244128">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1701244128" xil_pn:in_ck="-7186897567536050201" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-43314526502887490" xil_pn:start_ts="1701244128">
+    <transform xil_pn:end_ts="1701392494" xil_pn:in_ck="-7186897567536050201" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8876762319114718664" xil_pn:start_ts="1701392494">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/ram.ngc"/>
       <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701244958" xil_pn:in_ck="-8173490426226722757" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1701244958">
+    <transform xil_pn:end_ts="1701414352" xil_pn:in_ck="5973579541743830984" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1701414352">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="EdgeDetector.vhd"/>
+      <outfile xil_pn:name="Puerto_serie.vhd"/>
       <outfile xil_pn:name="boot.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
+      <outfile xil_pn:name="bootloader.vhd"/>
+      <outfile xil_pn:name="clk_12mhz.vhd"/>
+      <outfile xil_pn:name="mc8051_siu_.vhd"/>
+      <outfile xil_pn:name="mc8051_tmrctr_.vhd"/>
       <outfile xil_pn:name="mem_work.vhd"/>
+      <outfile xil_pn:name="test_bootloader.vhd"/>
       <outfile xil_pn:name="test_memory.vhd"/>
+      <outfile xil_pn:name="timer.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701244962" xil_pn:in_ck="-8173490426226722757" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4294573782375606686" xil_pn:start_ts="1701244958">
+    <transform xil_pn:end_ts="1701414362" xil_pn:in_ck="5973579541743830984" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-822737044521542014" xil_pn:start_ts="1701414352">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -78,18 +116,18 @@
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_memory_beh.prj"/>
-      <outfile xil_pn:name="test_memory_isim_beh.exe"/>
+      <outfile xil_pn:name="test_bootloader_beh.prj"/>
+      <outfile xil_pn:name="test_bootloader_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1701244963" xil_pn:in_ck="-7304428738462442585" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="7835154198061913195" xil_pn:start_ts="1701244962">
+    <transform xil_pn:end_ts="1701414363" xil_pn:in_ck="8332306964482311897" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7847392796473518193" xil_pn:start_ts="1701414362">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="test_memory_isim_beh.wdb"/>
+      <outfile xil_pn:name="test_bootloader_isim_beh.wdb"/>
     </transform>
   </transforms>
 

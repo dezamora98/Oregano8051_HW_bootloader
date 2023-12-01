@@ -1,0 +1,4 @@
+# Output products list for <clk_12mhz>
+clk_12mhz_flist.txt
+clk_12mhz_readme.txt
+clk_12mhz_xmdf.tcl

@@ -1,0 +1,2 @@
+vhdl isim_temp "reloj_12MHz.vhd"
+vhdl isim_temp "testreloj12.vhd"

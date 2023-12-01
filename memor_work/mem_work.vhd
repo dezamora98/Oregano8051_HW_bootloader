@@ -20,6 +20,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all; 
+use work.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -36,6 +37,7 @@ entity mem_work is
         reset            : IN  STD_LOGIC;
         en_boot          : IN  STD_LOGIC;                    -- enable boot module
         port_data_in     : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data input
+		  port_data_out    : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data output
 		  port_en_data_in  : IN  STD_LOGIC;                    -- enable signal for parallel data input
         port_en_data_out : IN  STD_LOGIC                    -- enable signal for parallel data output
 	);
@@ -73,7 +75,7 @@ architecture Behavioral of mem_work is
     );
     end component;
 	 
-	 signal salida_memoria :std_logic_vector(7 downto 0);
+	signal salida_memoria :std_logic_vector(7 downto 0);
 	signal escribir : std_logic;
 	signal escritura: std_logic_vector(0 downto 0);
 	signal entrada_memoria :std_logic_vector(7 downto 0);
@@ -114,7 +116,7 @@ begin
 	douta => memory_in
 	);
 
-	
+	port_data_out <= salida_memoria;
 
 end Behavioral;
 

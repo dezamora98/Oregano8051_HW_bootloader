@@ -3,14 +3,14 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -25,11 +25,11 @@ Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_w
 Architecture ram_a of Entity ram is up to date.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" in Library work.
 Entity <mem_work> compiled.
-Entity <mem_work> (Architecture <Behavioral>) compiled.
+Entity <mem_work> (Architecture <behavioral>) compiled.
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.52 secs
  
 --> 
 

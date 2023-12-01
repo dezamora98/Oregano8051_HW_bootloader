@@ -1,0 +1,3 @@
+vhdl work "clk_12mhz.vhd"
+vhdl work "reloj_12MHz.vhd"
+vhdl work "testreloj12.vhd"

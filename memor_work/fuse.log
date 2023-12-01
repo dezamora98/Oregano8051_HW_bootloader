@@ -1,24 +1,40 @@
-Running: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory_isim_beh.exe -prj C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory_beh.prj work.test_memory 
+Running: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_bootloader_isim_beh.exe -prj C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_bootloader_beh.prj work.test_bootloader 
 ISim M.81d (signature 0xcb73ee62)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" into library work
-Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/clk_12mhz.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/bootloader.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_bootloader.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 75256 KB
-Fuse CPU Usage: 380 ms
+Fuse Memory Usage: 83448 KB
+Fuse CPU Usage: 790 ms
 Using precompiled package standard from library std
 Using precompiled package std_logic_1164 from library ieee
 Using precompiled package numeric_std from library ieee
-Using precompiled package textio from library std
 Using precompiled package std_logic_arith from library ieee
+Using precompiled package textio from library std
+Using precompiled package vital_timing from library ieee
+Using precompiled package vital_primitives from library ieee
 Using precompiled package std_logic_unsigned from library ieee
 Using precompiled package std_logic_textio from library ieee
+Compiling package vcomponents
+Compiling package vpkg
+Compiling architecture ibufg_v of entity ibufg [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture dcm_sp_clock_divide_by_2_v of entity dcm_sp_clock_divide_by_2 [dcm_sp_clock_divide_by_2_default]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
+Compiling architecture dcm_sp_clock_lost_v of entity dcm_sp_clock_lost [dcm_sp_clock_lost_default]
+Compiling architecture dcm_sp_v of entity dcm_sp [\DCM_SP(true,"*",true,false,6.0,...]
+Compiling architecture behavioral of entity clk_12mhz [clk_12mhz_default]
 Compiling architecture arch of entity edgedetector [edgedetector_default]
 Compiling architecture arch of entity boot [boot_default]
 Compiling architecture output_stage_behavioral of entity blk_mem_gen_v4_3_output_stage [\BLK_MEM_GEN_V4_3_output_stage("...]
@@ -28,9 +44,12 @@ Compiling architecture mem_module_behavioral of entity blk_mem_gen_v4_3_mem_modu
 Compiling architecture behavioral of entity blk_mem_gen_v4_3 [\BLK_MEM_GEN_V4_3("blk_mem_gen_v...]
 Compiling architecture ram_a of entity ram [ram_default]
 Compiling architecture behavioral of entity mem_work [mem_work_default]
-Compiling architecture behavior of entity test_memory
+Compiling architecture rtl of entity mc8051_siu [mc8051_siu_default]
+Compiling architecture rtl of entity mc8051_tmrctr [mc8051_tmrctr_default]
+Compiling architecture behavioral of entity bootloader [bootloader_default]
+Compiling architecture behavior of entity test_bootloader
 Time Resolution for simulation is 1ps.
-Compiled 26 VHDL Units
-Built simulation executable C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_memory_isim_beh.exe
-Fuse Memory Usage: 81916 KB
-Fuse CPU Usage: 1231 ms
+Compiled 50 VHDL Units
+Built simulation executable C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_bootloader_isim_beh.exe
+Fuse Memory Usage: 94460 KB
+Fuse CPU Usage: 2032 ms
