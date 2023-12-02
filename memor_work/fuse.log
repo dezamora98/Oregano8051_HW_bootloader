@@ -5,7 +5,6 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 0
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" into library work
-Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_siu_.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" into library work
@@ -17,7 +16,7 @@ Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_wor
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 83448 KB
-Fuse CPU Usage: 750 ms
+Fuse CPU Usage: 810 ms
 Using precompiled package standard from library std
 Using precompiled package std_logic_1164 from library ieee
 Using precompiled package numeric_std from library ieee

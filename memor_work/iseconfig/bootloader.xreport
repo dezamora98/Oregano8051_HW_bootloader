@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-12-02T00:29:41</DateModified>
+  <DateModified>2023-12-02T09:11:19</DateModified>
   <ModuleName>bootloader</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/iseconfig/bootloader.xreport</SavedFilePath>
@@ -17,6 +17,7 @@
     <toc-item title="Performance Summary" target="Performance Summary" />
     <toc-item title="Failing Constraints" target="Failing Constraints" />
     <toc-item title="Detailed Reports" target="Detailed Reports" />
+    <table-item tableState="CollapsedTable" tableKey="DetailedReports" />
    </view>
    <view inputState="Unknown" program="implementation" contextTags="FPGA_ONLY" hidden="true" type="HTML" file="bootloader_envsettings.html" label="System Settings" />
    <view inputState="Translated" program="map" locator="MAP_IOB_TABLE" contextTags="FPGA_ONLY" type="IOBProperties" file="bootloader_map.xrpt" label="IOB Properties" />

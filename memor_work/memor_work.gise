@@ -27,6 +27,7 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="boot.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="boot.xst"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="boot_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="boot_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bootloader.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bootloader.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="bootloader.xst"/>
@@ -60,13 +61,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1701493820" xil_pn:in_ck="-7033532248490212947" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1701493820">
+    <transform xil_pn:end_ts="1701504587" xil_pn:in_ck="-7033532248490212947" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1701504587">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="EdgeDetector.vhd"/>
       <outfile xil_pn:name="Puerto_serie.vhd"/>
       <outfile xil_pn:name="boot.vhd"/>
@@ -78,12 +75,12 @@
       <outfile xil_pn:name="test_memory.vhd"/>
       <outfile xil_pn:name="timer.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701478788" xil_pn:in_ck="2081653613640472184" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7673319311973285184" xil_pn:start_ts="1701478788">
+    <transform xil_pn:end_ts="1701500002" xil_pn:in_ck="2081653613640472184" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7673319311973285184" xil_pn:start_ts="1701500001">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="clk_12mhz.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701478788" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6677827399272236222" xil_pn:start_ts="1701478788">
+    <transform xil_pn:end_ts="1701500002" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6677827399272236222" xil_pn:start_ts="1701500002">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -93,14 +90,9 @@
       <outfile xil_pn:name="ipcore_dir/ram.ngc"/>
       <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701493821" xil_pn:in_ck="5973579541743830984" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1701493820">
+    <transform xil_pn:end_ts="1701504587" xil_pn:in_ck="5973579541743830984" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1701504587">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="EdgeDetector.vhd"/>
       <outfile xil_pn:name="Puerto_serie.vhd"/>
       <outfile xil_pn:name="boot.vhd"/>
@@ -113,13 +105,10 @@
       <outfile xil_pn:name="test_memory.vhd"/>
       <outfile xil_pn:name="timer.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1701493831" xil_pn:in_ck="8703535499484825223" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-822737044521542014" xil_pn:start_ts="1701493821">
+    <transform xil_pn:end_ts="1701504598" xil_pn:in_ck="8703535499484825223" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-822737044521542014" xil_pn:start_ts="1701504587">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
@@ -128,10 +117,9 @@
       <outfile xil_pn:name="test_bootloader_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1701493831" xil_pn:in_ck="-7875981136608227274" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7847392796473518193" xil_pn:start_ts="1701493831">
+    <transform xil_pn:end_ts="1701504599" xil_pn:in_ck="-6547489059257966599" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7847392796473518193" xil_pn:start_ts="1701504598">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>

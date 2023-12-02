@@ -9,18 +9,22 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 15.00ms
+# run 5.00ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
 # restart
-# run 4.00ms
+# run 5.00ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
 # restart
-# run 4.00ms
+# run 5.00ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
 # restart
-# run 4.00ms
+# run 5.00ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).

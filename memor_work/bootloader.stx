@@ -4,40 +4,39 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-WARNING:HDLParsers:3607 - Unit work/mc8051_tmrctr is now defined in a different file.  It was defined in "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd", and is now defined in "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd".
+WARNING:HDLParsers:3607 - Unit work/mc8051_tmrctr is now defined in a different file.  It was defined in "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd", and is now defined in "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd".
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" in Library work.
 Architecture arch of Entity edgedetector is up to date.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" in Library work.
 Architecture arch of Entity boot is up to date.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" in Library work.
 Architecture ram_a of Entity ram is up to date.
-Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd" in Library work.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" in Library work.
 Architecture behavioral of Entity mem_work is up to date.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" in Library work.
 Architecture rtl of Entity mc8051_siu is up to date.
+Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" in Library work.
+Architecture rtl of Entity mc8051_tmrctr is up to date.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/bootloader.vhd" in Library work.
 Entity <bootloader> compiled.
 Entity <bootloader> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" in Library work.
-Architecture rtl of Entity mc8051_tmrctr is up to date.
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.55 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.51 secs
  
 --> 
 
