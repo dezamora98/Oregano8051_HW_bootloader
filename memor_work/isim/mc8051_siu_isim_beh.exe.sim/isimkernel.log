@@ -1,0 +1,28 @@
+Command line:
+   mc8051_siu_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  1468
+
+Sat Dec 02 01:59:05 2023
+
+
+ Elaboration Time: 0.200288 sec
+
+ Current Memory Usage: 333.304 Meg
+
+ Total Signals          : 49
+ Total Nets             : 111
+ Total Signal Drivers   : 44
+ Total Blocks           : 3
+ Total Primitive Blocks : 3
+ Total Processes        : 24
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 489
+
+ Total Simulation Time: 0.300432 sec
+
+ Current Memory Usage: 333.304 Meg
+
+Sat Dec 02 01:59:32 2023
+

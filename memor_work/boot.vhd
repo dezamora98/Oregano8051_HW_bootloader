@@ -35,7 +35,7 @@ ARCHITECTURE arch OF boot IS
         );
     END COMPONENT;
 
-    TYPE state_type IS (st_idle, st_wait_command, st_write, st_read, st_wait_size,
+    TYPE state_type IS (st_idle,st_wait_init_PS, st_wait_command, st_write, st_read, st_wait_size,
         st_wait_addr_h, st_wait_addr_l, st_wait_code, st_wait_data, st_write_data,
         st_send_data, st_wait_send_data, st_send_checksum);
 
@@ -134,10 +134,19 @@ BEGIN
             new_command  <= x"00";
             new_checksum <= x"00";
             IF en_boot = '1' THEN
-                next_state <= st_wait_command;
+                next_state <= st_wait_init_PS;
             ELSE
 					 next_state <= st_idle;	 
             END IF;
+				
+				WHEN st_wait_init_PS	=>	
+				IF data_in_ok ='1' THEN
+					if port_data_in = x"00" then
+						next_state <= st_wait_command;
+					end if;
+				end if;
+					
+				
 
             WHEN st_wait_command =>
             IF data_in_ok = '1' THEN

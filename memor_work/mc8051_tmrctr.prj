@@ -1,0 +1,2 @@
+vhdl work "mc8051_tmrctr_.vhd"
+vhdl work "timer.vhd"

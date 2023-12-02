@@ -1,60 +1,53 @@
-V3 34
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" 2023/11/29.08:48:16 M.81d
-EN work/boot 1701414352 \
+V3 31
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" 2023/12/01.23:49:32 M.81d
+EN work/boot 1701493803 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" \
       PB ieee/std_logic_1164 1290154108 PB ieee/NUMERIC_STD 1290154109
-AR work/boot/arch 1701414353 \
+AR work/boot/arch 1701493804 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" \
-      EN work/boot 1701414352 CP EdgeDetector
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/bootloader.vhd" 2023/12/01.08:05:47 M.81d
-EN work/bootloader 1701414360 \
+      EN work/boot 1701493803 CP EdgeDetector
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/bootloader.vhd" 2023/12/02.06:09:58 M.81d
+EN work/bootloader 1701493812 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/bootloader.vhd" \
       PB ieee/std_logic_1164 1290154108
-AR work/bootloader/Behavioral 1701414361 \
+AR work/bootloader/Behavioral 1701493813 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/bootloader.vhd" \
-      EN work/bootloader 1701414360 CP clk_12mhz CP mem_work CP mc8051_siu \
+      EN work/bootloader 1701493812 CP clk_12mhz CP mem_work CP mc8051_siu \
       CP mc8051_tmrctr
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" 2023/11/26.18:31:01 M.81d
-EN work/EdgeDetector 1701414350 \
+EN work/EdgeDetector 1701493801 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" \
       PB ieee/std_logic_1164 1290154108
-AR work/EdgeDetector/Arch 1701414351 \
+AR work/EdgeDetector/Arch 1701493802 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" \
-      EN work/EdgeDetector 1701414350
+      EN work/EdgeDetector 1701493801
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" 2023/11/29.01:33:26 M.81d
-EN work/ram 1701414354 \
+EN work/ram 1701493805 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" \
       PB ieee/std_logic_1164 1290154108
-AR work/ram/ram_a 1701414355 \
+AR work/ram/ram_a 1701493806 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" \
-      EN work/ram 1701414354
+      EN work/ram 1701493805
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_siu_.vhd" 2013/06/03.10:39:34 M.81d
-EN work/mc8051_siu 1701414362 \
-      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_siu_.vhd" \
-      PB ieee/std_logic_1164 1290154108 PB ieee/std_logic_arith 1290154109
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd" 2013/06/03.10:39:34 M.81d
-EN work/mc8051_tmrctr 1701414364 \
+EN work/mc8051_tmrctr 1701493814 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd" \
       PB ieee/std_logic_1164 1290154108 PB ieee/std_logic_arith 1290154109
 FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" 2023/12/01.06:06:07 M.81d
-EN work/mem_work 1701414358 \
+EN work/mem_work 1701493808 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" \
       PB ieee/std_logic_1164 1290154108 PB ieee/NUMERIC_STD 1290154109 LB work
-AR work/mem_work/Behavioral 1701414359 \
+AR work/mem_work/Behavioral 1701493809 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mem_work.vhd" \
-      EN work/mem_work 1701414358 CP boot CP ram
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" 2023/11/29.22:26:22 M.81d
-AR work/mc8051_siu/rtl 1701414363 \
+      EN work/mem_work 1701493808 CP boot CP ram
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" 2023/12/02.01:57:50 M.81d
+EN work/mc8051_siu 1701493810 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" \
-      EN work/mc8051_siu 1701414362
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/reloj_12MHz.vhd" 2023/12/01.02:01:05 M.81d
-EN work/reloj_12MHz 1701392468 \
-      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/reloj_12MHz.vhd" \
-      PB ieee/std_logic_1164 1290154108
-AR work/reloj_12MHz/Behavioral 1701392469 \
-      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/reloj_12MHz.vhd" \
-      EN work/reloj_12MHz 1701392468 CP clk_12mhz
-FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" 2023/11/29.22:31:06 M.81d
-AR work/mc8051_tmrctr/rtl 1701414365 \
+      PB ieee/std_logic_1164 1290154108 PB ieee/std_logic_arith 1290154109
+AR work/mc8051_siu/rtl 1701493811 \
+      FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" \
+      EN work/mc8051_siu 1701493810
+FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" 2023/12/02.01:58:54 M.81d
+AR work/mc8051_tmrctr/rtl 1701493815 \
       FL "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" \
-      EN work/mc8051_tmrctr 1701414364
+      EN work/mc8051_tmrctr 1701493814

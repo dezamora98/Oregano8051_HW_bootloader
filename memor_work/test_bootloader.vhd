@@ -93,8 +93,64 @@ BEGIN
 		
 		wait for 350 ns;
 		en_boot <= '1';
-
-      wait for clock_period*10;
+	
+--inicializacion
+	
+		wait for 2 us;
+		uart_rx <= '1';
+		
+		wait for 6 us;
+		uart_rx <= '0';
+		
+		wait for 290 us;
+		uart_rx <= '1';
+		
+		
+--		wait for 100 us;
+--		uart_rx <= '1';
+--		
+--		wait for 2.5 ms;
+--		uart_rx <= '0';
+--		
+--		
+--		
+----envio del comando
+--
+--      wait for 3.50 ms;
+--		uart_rx <= '1';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '1';
+--		
+--		wait for 62 ns;
+--		uart_rx <= '0';
+		
+--envio del size
+		
+		
+		
+		
 
       -- insert stimulus here 
 

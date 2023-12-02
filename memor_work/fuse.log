@@ -6,6 +6,7 @@ Determining compilation order of HDL files
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/ipcore_dir/ram.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_tmrctr_.vhd" into library work
+Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/mc8051_siu_.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/timer.vhd" into library work
 Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/Puerto_serie.vhd" into library work
@@ -16,7 +17,7 @@ Parsing VHDL file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_wor
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 83448 KB
-Fuse CPU Usage: 790 ms
+Fuse CPU Usage: 750 ms
 Using precompiled package standard from library std
 Using precompiled package std_logic_1164 from library ieee
 Using precompiled package numeric_std from library ieee
@@ -52,4 +53,4 @@ Time Resolution for simulation is 1ps.
 Compiled 50 VHDL Units
 Built simulation executable C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_bootloader_isim_beh.exe
 Fuse Memory Usage: 94460 KB
-Fuse CPU Usage: 2032 ms
+Fuse CPU Usage: 2012 ms

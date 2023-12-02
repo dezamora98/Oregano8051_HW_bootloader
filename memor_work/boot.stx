@@ -4,13 +4,13 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.24 secs
+Total CPU time to Xst completion: 0.18 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -20,11 +20,12 @@ Total CPU time to Xst completion: 0.24 secs
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/EdgeDetector.vhd" in Library work.
 Architecture arch of Entity edgedetector is up to date.
 Compiling vhdl file "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/boot.vhd" in Library work.
-Architecture arch of Entity boot is up to date.
+Entity <boot> compiled.
+Entity <boot> (Architecture <arch>) compiled.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.42 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> 
 

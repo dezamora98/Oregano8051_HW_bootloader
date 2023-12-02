@@ -1,6 +1,7 @@
 vhdl work "ipcore_dir/ram.vhd"
 vhdl work "EdgeDetector.vhd"
 vhdl work "mc8051_tmrctr_.vhd"
+vhdl work "mc8051_siu_.vhd"
 vhdl work "boot.vhd"
 vhdl work "timer.vhd"
 vhdl work "Puerto_serie.vhd"

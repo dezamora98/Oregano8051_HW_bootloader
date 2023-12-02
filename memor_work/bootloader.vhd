@@ -42,7 +42,7 @@ end bootloader;
 
 architecture Behavioral of bootloader is
 	
-	TYPE state_type IS (inicio, conf_timer, conf_PS, program);
+	TYPE state_type IS (inicio, conf_timer_l, conf_timer_h, conf_PS, program);
 
    SIGNAL state : state_type := inicio;
 	
@@ -208,7 +208,7 @@ begin
     END PROCESS; -- sync
 		  
 		
-	next_state_decode : PROCESS (state, tmod, wt, wt_en, reload , trans, scon_i, smod)
+	next_state_decode : PROCESS (state, en_boot, tmod, wt, wt_en, reload , trans, scon_i, smod)
     BEGIN
 
         --next_state   <= state;
@@ -217,32 +217,29 @@ begin
 		  
 		  when inicio =>
 		  if en_boot = '1' then
-				next_state <= conf_timer;
+				next_state <= conf_timer_l;
 		  else 
 				next_state <= inicio;
 		  end if;
 		  
-		  when conf_timer =>
-		  if wt = "00" then
-			   tmod <= x"10";
+		  when conf_timer_l =>
+			   tmod <= x"20";
 				wt <= "01";
 				wt_en <= '1';
-				reload <= x"19";
-				next_state <= conf_timer;
-			elsif wt = "01" then
+				reload <= x"FE";
+				next_state <= conf_timer_h;
+			
+			when conf_timer_h =>
 				wt <= "11";
 				wt_en <= '1';
 				reload <= x"FF";
-				
-			elsif wt ="11" then
 				next_state <= conf_PS;
-			else
-				next_state <= inicio;
-			end if;
+				
 			
 			when conf_PS =>
-				trans <= '1';
-				scon_i <= "010010";
+				wt_en <= '0';
+				trans <= '0';
+				scon_i <= "001010";
 				smod <= '0';
 				tcon_tr1 <= '1';
 				next_state <= program;

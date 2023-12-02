@@ -1,0 +1,5 @@
+set -tmpdir "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/xst/projnav.tmp"
+set -xsthdpdir "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/xst"
+elaborate
+-ifn mc8051_tmrctr.prj
+-ifmt mixed
