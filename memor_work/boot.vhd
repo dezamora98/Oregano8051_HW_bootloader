@@ -37,7 +37,7 @@ ARCHITECTURE arch OF boot IS
 
     TYPE state_type IS (st_idle,st_wait_init_PS, st_wait_command, st_write, st_read, st_wait_size,
         st_wait_addr_h, st_wait_addr_l, st_wait_code, st_wait_data, st_write_data,
-        st_send_data, st_wait_send_data, st_send_checksum);
+        st_send_data, st_wait_send_data, st_send_checksum, st_wait_checksum);
 
     SIGNAL state, next_state : state_type := st_idle;
 
@@ -60,14 +60,16 @@ ARCHITECTURE arch OF boot IS
 
     SIGNAL data_in_ok  : STD_LOGIC;
     SIGNAL data_out_ok : STD_LOGIC;
+	 
+	 signal validacion : std_logic := '0';
 
 BEGIN
 
-    port_data_out <= mem_data_in WHEN state = st_send_data ELSE
-                     checksum WHEN state = st_send_checksum ELSE
+    port_data_out <= mem_data_in WHEN state = st_wait_send_data ELSE
+                     checksum WHEN state = st_wait_checksum ELSE
                      x"00";
 
-    port_wr_data_out <= '1' WHEN state = st_send_data ELSE
+    port_wr_data_out <= '1' WHEN state = st_send_data or state = st_send_checksum ELSE
                         '0';
 
     mem_addr <= addr;
@@ -115,7 +117,7 @@ BEGIN
     END PROCESS; -- sync
 
     next_state_decode : PROCESS (state, en_boot, port_data_in, data_in_ok, data_out_ok,
-        size, addr, code, command, checksum)
+        size, addr, code, command, checksum, validacion)
     BEGIN
 
         next_state   <= state;
@@ -133,8 +135,10 @@ BEGIN
             new_code     <= x"00";
             new_command  <= x"00";
             new_checksum <= x"00";
-            IF en_boot = '1' THEN
+            IF (en_boot = '1' and validacion = '0' )THEN
                 next_state <= st_wait_init_PS;
+				ELSIF (en_boot = '1' and validacion ='1') then
+					 next_state <= st_wait_command;
             ELSE
 					 next_state <= st_idle;	 
             END IF;
@@ -143,6 +147,7 @@ BEGIN
 				IF data_in_ok ='1' THEN
 					if port_data_in = x"00" then
 						next_state <= st_wait_command;
+						validacion <= '1';
 					end if;
 				end if;
 					
@@ -216,7 +221,15 @@ BEGIN
             
 
             WHEN st_send_checksum =>
-            next_state <= st_idle;
+					if command = x"00" then
+						new_checksum <= std_logic_vector(unsigned((NOT checksum)) + 1); --The two's complement
+					end if;
+					next_state <= st_wait_checksum;
+					
+				WHEN st_wait_checksum =>
+					if data_out_ok ='1' then
+						next_state <= st_idle;
+					end if;
 
             WHEN st_read =>
             IF code = x"00" THEN
@@ -231,9 +244,14 @@ BEGIN
 
             WHEN st_wait_send_data =>
             IF data_out_ok = '1' THEN
+					 new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(mem_data_in));
                 IF size = x"01" THEN
-                    new_checksum <= std_logic_vector(unsigned((NOT checksum)) + 1); --The two's complement
+                    
                     next_state   <= st_send_checksum;
+					 ELSIF size = x"01" THEN
+						  
+						  new_size     <= std_logic_vector(unsigned(size) - 1);
+						  next_state   <= st_send_data;
                 ELSE
                     new_checksum <= std_logic_vector(unsigned(checksum) + unsigned(mem_data_in));
                     new_addr     <= std_logic_vector(unsigned(addr) + 1);

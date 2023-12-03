@@ -9,22 +9,8 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 5.00ms
+# run 10ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
-# restart
-# run 5.00ms
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
-# restart
-# run 5.00ms
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
-# restart
-# run 5.00ms
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-at 2157439996 ps(2): Note: Block Memory Generator CORE Generator module is using a behavioral model FOR simulation which will not precisely model memory collision behavior. (/test_bootloader/uut/memory_work/memory/U0/mem_module/).
+Stopped at time : 7316190 ns : File "C:/Documents and Settings/lester/Escritorio/OOOOOOO/memor_work/test_bootloader.vhd" Line 81

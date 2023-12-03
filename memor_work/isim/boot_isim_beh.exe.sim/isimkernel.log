@@ -1,13 +1,13 @@
 Command line:
    boot_isim_beh.exe
      -simmode  gui
-     -simrunnum  1
-     -socket  1490
+     -simrunnum  0
+     -socket  1522
 
-Sat Dec 02 07:53:04 2023
+Sat Dec 02 22:53:35 2023
 
 
- Elaboration Time: 0.240347 sec
+ Elaboration Time: 0.190274 sec
 
  Current Memory Usage: 333.283 Meg
 
@@ -20,9 +20,9 @@ Sat Dec 02 07:53:04 2023
  Total Traceable Variables  : 15
  Total Scalar Nets and Variables : 661
 
- Total Simulation Time: 0.290418 sec
+ Total Simulation Time: 0.230331 sec
 
  Current Memory Usage: 333.283 Meg
 
-Sat Dec 02 07:53:11 2023
+Sat Dec 02 22:53:43 2023
 

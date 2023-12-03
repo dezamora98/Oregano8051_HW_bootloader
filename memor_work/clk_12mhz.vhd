@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 12.4
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : clk_12mhz.vhd
--- /___/   /\     Timestamp : 12/01/2023 23:08:51
+-- /___/   /\     Timestamp : 12/02/2023 22:44:53
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

@@ -2,27 +2,27 @@ Command line:
    test_bootloader_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  1501
+     -socket  1544
 
-Sat Dec 02 09:10:13 2023
+Sun Dec 03 01:21:34 2023
 
 
- Elaboration Time: 6.35914 sec
+ Elaboration Time: 6.17889 sec
 
  Current Memory Usage: 505.7 Meg
 
- Total Signals          : 548
- Total Nets             : 525261
- Total Signal Drivers   : 317
+ Total Signals          : 551
+ Total Nets             : 525262
+ Total Signal Drivers   : 318
  Total Blocks           : 37
  Total Primitive Blocks : 25
- Total Processes        : 199
+ Total Processes        : 200
  Total Traceable Variables  : 363
- Total Scalar Nets and Variables : 531051
+ Total Scalar Nets and Variables : 531052
 
- Total Simulation Time: 73.9463 sec
+ Total Simulation Time: 30.0332 sec
 
  Current Memory Usage: 505.7 Meg
 
-Sat Dec 02 09:48:39 2023
+Sun Dec 03 01:23:46 2023
 

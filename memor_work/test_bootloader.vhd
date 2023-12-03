@@ -147,13 +147,13 @@ BEGIN
 		uart_rx <= '0';
 		
 		wait for 32 us;--D1
-		uart_rx <= '0';
+		uart_rx <= '1';
 		
 		wait for 32 us;--D2
 		uart_rx <= '0';
 		
 		wait for 32 us;--D3
-		uart_rx <= '1';
+		uart_rx <= '0';
 		
 		wait for 32 us;--D4
 		uart_rx <= '0';
@@ -216,7 +216,7 @@ BEGIN
 		uart_rx <= '0';
 		
 		wait for 32 us;--D3
-		uart_rx <= '1';
+		uart_rx <= '0';
 		
 		wait for 32 us;--D4
 		uart_rx <= '0';
@@ -271,13 +271,13 @@ BEGIN
 		uart_rx <= '0';
 		
 		wait for 32 us;--D0
-		uart_rx <= '0';
+		uart_rx <= '1';
 		
 		wait for 32 us;--D1
 		uart_rx <= '0';
 		
 		wait for 32 us;--D2
-		uart_rx <= '0';
+		uart_rx <= '1';
 		
 		wait for 32 us;--D3
 		uart_rx <= '0';
@@ -289,7 +289,7 @@ BEGIN
 		uart_rx <= '0';
 		
 		wait for 32 us;--D6
-		uart_rx <= '1';
+		uart_rx <= '0';
 		
 		wait for 32 us;--D7
 		uart_rx <= '0';
@@ -328,12 +328,235 @@ BEGIN
 		wait for 32 us;--bit de parada
 		uart_rx <= '1';
 		
-		--dato 3
+--		--dato 3
+--		wait for 20 us;--bit de start
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D0
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--D1
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--D2
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D3
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D4
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D5
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D6
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D7
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--bit de parada
+--		uart_rx <= '1';
+--		
+--		--dato 4
+--		wait for 20 us;--bit de start
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D0
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--D1
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D2
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D3
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D4
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D5
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D6
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D7
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--bit de parada
+--		uart_rx <= '1';
+--		
+--		--dato 5
+--		wait for 20 us;--bit de start
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D0
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D1
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--D2
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--D3
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D4
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D5
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D6
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D7
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--bit de parada
+--		uart_rx <= '1';
+--		
+--		--dato 6
+--		
+--		wait for 20 us;--bit de start
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D0
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D1
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D2
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D3
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D4
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D5
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D6
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D7
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--bit de parada
+--		uart_rx <= '1';
+--		
+--		--dato 7
+--		wait for 20 us;--bit de start
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D0
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D1
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D2
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D3
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--D4
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D5
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D6
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D7
+--		uart_rx <= '1';
+--		
+--		wait for 32 us;--bit de parada
+--		uart_rx <= '1';
+--		
+--		--dato 8
+--		wait for 20 us;--bit de start
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D0
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D1
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D2
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D3
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D4
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D5
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D6
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--D7
+--		uart_rx <= '0';
+--		
+--		wait for 32 us;--bit de parada
+--		uart_rx <= '1';
+		
+		--esperar checksum
+		
+		wait for 400 us;
+	   
+		--enviar comando
 		wait for 20 us;--bit de start
 		uart_rx <= '0';
 		
 		wait for 32 us;--D0
+		uart_rx <= '0';
+		
+		wait for 32 us;--D1
+		uart_rx <= '0';
+		
+		wait for 32 us;--D2
+		uart_rx <= '0';
+		
+		wait for 32 us;--D3
+		uart_rx <= '0';
+		
+		wait for 32 us;--D4
+		uart_rx <= '0';
+		
+		wait for 32 us;--D5
+		uart_rx <= '0';
+		
+		wait for 32 us;--D6
+		uart_rx <= '0';
+		
+		wait for 32 us;--D7
+		uart_rx <= '0';
+		
+		wait for 32 us;--bit de parada
 		uart_rx <= '1';
+     		
+--envio del size
+		
+		wait for 20 us;--bit de start
+		uart_rx <= '0';
+		
+		wait for 32 us;--D0
+		uart_rx <= '0';
 		
 		wait for 32 us;--D1
 		uart_rx <= '1';
@@ -359,70 +582,8 @@ BEGIN
 		wait for 32 us;--bit de parada
 		uart_rx <= '1';
 		
-		--dato 4
-		wait for 20 us;--bit de start
-		uart_rx <= '0';
-		
-		wait for 32 us;--D0
-		uart_rx <= '1';
-		
-		wait for 32 us;--D1
-		uart_rx <= '0';
-		
-		wait for 32 us;--D2
-		uart_rx <= '0';
-		
-		wait for 32 us;--D3
-		uart_rx <= '0';
-		
-		wait for 32 us;--D4
-		uart_rx <= '0';
-		
-		wait for 32 us;--D5
-		uart_rx <= '0';
-		
-		wait for 32 us;--D6
-		uart_rx <= '0';
-		
-		wait for 32 us;--D7
-		uart_rx <= '0';
-		
-		wait for 32 us;--bit de parada
-		uart_rx <= '1';
-		
-		--dato 5
-		wait for 20 us;--bit de start
-		uart_rx <= '0';
-		
-		wait for 32 us;--D0
-		uart_rx <= '0';
-		
-		wait for 32 us;--D1
-		uart_rx <= '1';
-		
-		wait for 32 us;--D2
-		uart_rx <= '1';
-		
-		wait for 32 us;--D3
-		uart_rx <= '0';
-		
-		wait for 32 us;--D4
-		uart_rx <= '0';
-		
-		wait for 32 us;--D5
-		uart_rx <= '0';
-		
-		wait for 32 us;--D6
-		uart_rx <= '0';
-		
-		wait for 32 us;--D7
-		uart_rx <= '1';
-		
-		wait for 32 us;--bit de parada
-		uart_rx <= '1';
-		
-		--dato 6
-		
+--envio de addr_h
+
 		wait for 20 us;--bit de start
 		uart_rx <= '0';
 		
@@ -453,38 +614,7 @@ BEGIN
 		wait for 32 us;--bit de parada
 		uart_rx <= '1';
 		
-		--dato 7
-		wait for 20 us;--bit de start
-		uart_rx <= '0';
-		
-		wait for 32 us;--D0
-		uart_rx <= '0';
-		
-		wait for 32 us;--D1
-		uart_rx <= '0';
-		
-		wait for 32 us;--D2
-		uart_rx <= '0';
-		
-		wait for 32 us;--D3
-		uart_rx <= '1';
-		
-		wait for 32 us;--D4
-		uart_rx <= '0';
-		
-		wait for 32 us;--D5
-		uart_rx <= '0';
-		
-		wait for 32 us;--D6
-		uart_rx <= '0';
-		
-		wait for 32 us;--D7
-		uart_rx <= '1';
-		
-		wait for 32 us;--bit de parada
-		uart_rx <= '1';
-		
-		--dato 8
+--envio de addr_l
 		wait for 20 us;--bit de start
 		uart_rx <= '0';
 		
@@ -515,6 +645,38 @@ BEGIN
 		wait for 32 us;--bit de parada
 		uart_rx <= '1';
 
+--envio de code
+
+		wait for 20 us;--bit de start
+		uart_rx <= '0';
+		
+		wait for 32 us;--D0
+		uart_rx <= '0';
+		
+		wait for 32 us;--D1
+		uart_rx <= '0';
+		
+		wait for 32 us;--D2
+		uart_rx <= '0';
+		
+		wait for 32 us;--D3
+		uart_rx <= '0';
+		
+		wait for 32 us;--D4
+		uart_rx <= '0';
+		
+		wait for 32 us;--D5
+		uart_rx <= '0';
+		
+		wait for 32 us;--D6
+		uart_rx <= '0';
+		
+		wait for 32 us;--D7
+		uart_rx <= '0';
+		
+		wait for 32 us;--bit de parada
+		uart_rx <= '1';
+		
       wait;
    end process;
 

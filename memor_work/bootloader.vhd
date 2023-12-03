@@ -56,7 +56,8 @@ architecture Behavioral of bootloader is
         port_data_in     : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data input
 		  port_data_out    : OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- parallel data output
 		  port_en_data_in  : IN  STD_LOGIC;                    -- enable signal for parallel data input
-        port_en_data_out : IN  STD_LOGIC                    -- enable signal for parallel data output
+        port_en_data_out : IN  STD_LOGIC;                    -- enable signal for parallel data output
+		  port_wr_data_out : out std_logic
 	);
 end component;
 	
@@ -153,7 +154,8 @@ begin
         port_data_in     => sbuf_o, -- parallel data input
 		  port_data_out    => sbuf_i, -- parallel data output
 		  port_en_data_in  => scon_o(0),                    -- enable signal for parallel data input
-        port_en_data_out => scon_o(1)                    -- enable signal for parallel data output
+        port_en_data_out => scon_o(1),                    -- enable signal for parallel data output
+		  port_wr_data_out => trans
 	);
 
 
@@ -238,7 +240,6 @@ begin
 			
 			when conf_PS =>
 				wt_en <= '0';
-				trans <= '0';
 				scon_i <= "001010";
 				smod <= '0';
 				tcon_tr1 <= '1';
